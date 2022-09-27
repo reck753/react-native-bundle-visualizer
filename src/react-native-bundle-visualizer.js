@@ -54,9 +54,8 @@ function getReactNativeBin() {
 }
 
 // Get (default) arguments
-const baseDir = path.join(os.tmpdir(), 'react-native-bundle-visualizer');
-const tmpDir = path.join(baseDir, getAppName());
-const outDir = path.join(tmpDir, 'output');
+const tmpDir = path.join('./', getAppName());
+const outDir = path.join('./bundle-analysis', 'output');
 const entryFile = argv['entry-file'] || getEntryPoint();
 const platform = argv.platform || 'ios';
 const expoTargetDeprecated = argv.expo || '';
@@ -71,7 +70,6 @@ const bundleOutputExplorerFile = path.join(outDir, 'explorer.' + format);
 const onlyMapped = !!argv['only-mapped'] || false;
 
 // Make sure the temp dir exists
-fs.ensureDirSync(baseDir);
 fs.ensureDirSync(tmpDir);
 
 // Try to obtain the previous file size
