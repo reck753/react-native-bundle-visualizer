@@ -1,6 +1,6 @@
 {
-  "name": "react-native-bundle-visualizer",
-  "version": "3.1.1",
+  "name": "updated-react-native-bundle-visualizer",
+  "version": "1.0.0",
   "description": "See what's inside your react-native bundle",
   "author": "IjzerenHein <hrutjes@gmail.com>",
   "keywords": [
@@ -14,8 +14,13 @@
     "bundle-size"
   ],
   "bin": "./src/react-native-bundle-visualizer.js",
-  "repository": "https://github.com/IjzerenHein/react-native-bundle-visualizer",
-  "bugs": "https://github.com/IjzerenHein/react-native-bundle-visualizer/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reck753/react-native-bundle-visualizer.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "files": [
     "src"
